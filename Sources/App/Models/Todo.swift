@@ -24,3 +24,16 @@ extension Todo: Content { }
 
 /// Allows `Todo` to be used as a dynamic parameter in route definitions.
 extension Todo: Parameter { }
+
+final class CustomResponse: Content, Decodable {
+    var message = ""
+    var data: [Todo]?
+    
+    init(from decoder: Decoder) throws {
+        
+    }
+    
+    init() {
+        
+    }
+}
