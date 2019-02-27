@@ -44,17 +44,17 @@ let promise = req.eventLoop.newPromise(CustomResponse.self)
 //        error.reason = "Bad number"
 //        throw error
 
-        guard let title = req.query[String.self, at: "title"] else {
-            throw Abort(.badRequest)
-        }
-        
-        guard let customID = req.query[Int.self, at: "id"] else {
-            throw Abort(.badRequest)
-        }
-
-        let par = try req.parameters.next(String.self)
-        let par2 = try req.parameters.next(String.self)
-        
+//        guard let title = req.query[String.self, at: "title"] else {
+//            throw Abort(.badRequest)
+//        }
+//        
+//        guard let customID = req.query[Int.self, at: "id"] else {
+//            throw Abort(.badRequest)
+//        }
+//
+//        let par = try req.parameters.next(String.self)
+//        let par2 = try req.parameters.next(String.self)
+//        
         let baseObj = obj.save(on: req)
         
         return baseObj
